@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import codeboy from "../images/codeboy.png";
+import { useState } from "react";
+
 import {
   TbBrandJavascript,
   TbBrandHtml5,
@@ -9,7 +9,7 @@ import {
   TbBrandReact,
   TbBrandNodejs,
   TbBrandMongodb,
-  TbBrandMysql,
+  TbBrandNextjs,
   TbBrandRedux,
   TbBrandGit,
   TbBrandGithub,
@@ -23,20 +23,35 @@ function AboutMe() {
   const handleTabClick = (id) => {
     setActiveTab(id);
   };
+
+  const icons = [
+    { icon: TbBrandJavascript, name: "Javascript", color: "#F0DB4F" },
+    { icon: TbBrandHtml5, name: "HTML", color: "#f06529" },
+    { icon: TbBrandCss3, name: "CSS", color: "#2965f1" },
+    { icon: TbBrandBootstrap, name: "Bootstrap", color: "#563d7c" },
+    { icon: TbBrandTailwind, name: "Tailwindcss", color: "#38b2ac" },
+    { icon: TbBrandReact, name: "React Js", color: "#61dafb" },
+    { icon: TbBrandNodejs, name: "Node Js", color: "#8cc84b" },
+    { icon: SiExpress, name: "Express Js", color: "#6c6c6c" },
+    { icon: TbBrandMongodb, name: "MongoDB", color: "#47a248" },
+    { icon: TbBrandNextjs, name: "Next.js", color: "white" },
+    { icon: TbBrandRedux, name: "Redux", color: "#764abc" },
+    { icon: TbBrandGit, name: "Git", color: "#f05032" },
+    { icon: TbBrandGithub, name: "Github", color: "black" },
+  ];
+
   return (
     <>
-      <section className="flex flex-col md:flex-row h-screen items-center md:px-[75px] px-[30px] py-20">
-        {/* Image Section */}
-        <div className="  lg:w-[440px] md:w-[350px] w-[370px] lg:ml-6 h-auto ">
-          <img src={codeboy} alt="my profile" className="h-[600px]" />
-        </div>
-        {/* About Me Section */}
-        <div className=" lg:w-[750px] md:w-[480px] w-[370px] h-[100%] ml-5 mt-20">
-          <h1 className="text-[40px] text-white font-bold font-serif">
+      <section
+        id="about"
+        className="flex flex-col md:flex-row h-screen md:px-[75px] px-[30px] py-20"
+      >
+        <div className="pt-5 md:pt-28 md:max-w-[350px] lg:max-w-screen-md">
+          <h1 className="md:text-[35px] lg:text-[50px] text-[30px] text-white font-bold font-serif md:text-left text-center">
             About Me
           </h1>
-          <p className="text-white mt-2">
-            <span className="text-my-theme font-bold text-[17px]">
+          <p className="text-white md:text-[14px] lg:text-[17px] text-[18px] md:text-left text-center ">
+            <span className="text-my-theme font-bold md:text-[16px] lg:text-[22px] text-[20px]">
               Hello! my name is Swapnil
             </span>{" "}
             a passionate MERN Full Stack Developer.With a strong foundation in
@@ -46,17 +61,16 @@ function AboutMe() {
             MongoDB is my go-to database for storing and retrieving data
             efficiently.
           </p>
-          <p className="mt-2 text-white">
-            <span className="text-my-theme font-bold text-[17px]">
+          <p className="text-white md:text-[14px] lg:text-[17px] text-[18px] md:text-left text-center md:pt-3">
+            <span className="text-my-theme font-bold  md:text-[16px] lg:text-[22px] text-[20px]">
               As a fullstack Developer
             </span>{" "}
             I enjoy making interactive and user-friendly websites/web apps. My
             goal is to always build things that are scalable and interactive for
             Users.
           </p>
-
-          <p className="mt-2 text-white">
-            <span className="text-my-theme font-bold mt-2 ">
+          <p className="text-white md:text-[14px] lg:text-[17px] text-[18px] md:text-left text-center md:pt-3">
+            <span className="text-my-theme font-bold mt-2 md:text-[16px] lg:text-[22px] text-[20px]">
               Get in touch :{" "}
             </span>{" "}
             <a
@@ -66,184 +80,200 @@ function AboutMe() {
               swapnil.zakade.33@gmail.com
             </a>
           </p>
+        </div>
 
-          {/* Tabs Section */}
-          <div className="flex flex-col">
-            <div className=" flex justify-around text-white text-[18px] mt-5 border-my-theme rounded-lg p-2 border-2">
-              <button
-                className={`${
-                  activeTab === 1 ? "active text-my-theme " : ""
-                } after:content-[''] `}
-                onClick={() => handleTabClick(1)}
-              >
-                Skills
-              </button>
-              <button
-                className={`${activeTab === 2 ? "active text-my-theme" : ""}`}
-                onClick={() => handleTabClick(2)}
-              >
-                Education
-              </button>
-              <button
-                className={`${activeTab === 3 ? "active text-my-theme" : ""}`}
-                onClick={() => handleTabClick(3)}
-              >
-                Experience
-              </button>
-            </div>
-            {/* Tabs data section */}
-            <div className="text-white  ">
-              {activeTab === 1 && (
-                <div className="grid grid-cols-5 mt-10 grid-rows-4 gap-3 justify-items-center">
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandJavascript className="text-[45px] hover:text-[#F0DB4F] hover:scale-125" />
-                    <p className="text-[18px] font-bold">Javascript</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandHtml5 className="text-[45px] hover:text-[#f06529] hover:scale-125" />
-                    <p className="text-[18px] font-bold">HTML</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandCss3 className="text-[45px] hover:text-[#2965f1] hover:scale-125" />
-                    <p className="text-[18px] font-bold">CSS</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandBootstrap className="text-[45px] hover:text-[#563d7c] hover:scale-125" />
-                    <p className="text-[18px] font-bold">Bootstrap</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandTailwind className="text-[45px] hover:text-my-theme hover:scale-125" />
-                    <p className="text-[18px] font-bold">Tailwindcss</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandReact className="text-[45px] hover:text-[#61dafb] hover:scale-125" />
-                    <p className="text-[18px] font-bold ">React Js</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandNodejs className="text-[45px] hover:text-[#8cc84b] hover:scale-125" />
-                    <p className="text-[18px] font-bold">Node Js</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <SiExpress className="text-[45px] hover:text-[#6c6c6c] hover:scale-125" />
-                    <p className="text-[18px] font-bold">Express Js</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandMongodb className="text-[45px] hover:text-[#47a248] hover:scale-125" />
-                    <p className="text-[18px] font-bold">MongoDB</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandMysql className="text-[45px] hover:text-[#00758f] hover:scale-125" />
-                    <p className="text-[18px] font-bold">MySQL</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandRedux className="text-[45px] hover:text-[#764abc] hover:scale-125" />
-                    <p className="text-[18px] font-bold">Redux</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandGit className="text-[45px] hover:text-[#f05032] hover:scale-125" />
-                    <p className="text-[18px] font-bold">Git</p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <TbBrandGithub className="text-[45px]  hover:text-black hover:scale-125" />
-                    <p className="text-[18px] font-bold">Github</p>
-                  </div>
-                </div>
-              )}
-              {activeTab === 2 && (
-                <div className="mt-5 w-full">
-                  <div className=" pl-5 pt-5">
-                    {/* <p className="text-xl font-semibold">2023</p>
-                    <p className="mb-4 text-2xl text-my-theme whitespace-nowrap">
-                      Bachelors of Science in Information Technology
-                    </p>
-
-                    <h1 className="text-xl font-semibold ">2015</h1>
-                    <p className="mb-4 text-2xl whitespace-nowrap text-my-theme">
-                      HSC (Higher Secondary Certificate)
-                    </p>
-
-                    <h1 className="text-xl font-semibold">2013</h1>
-                    <p className="mb-4 text-2xl whitespace-nowrap text-my-theme">
-                      SSC (Secondary School Certificate )
-                    </p> */}
-
-                    <div className="max-w-7xl mx-auto w-full grid grid-cols-9">
-                      {/* Stack 1 */}
-                      <div className="col-span-4 w-full h-full ">
-                        <div className="w-full h-full bg-my-theme  rounded-md p-2 md:pl-4">
-                          <h1 className="text-white text-lg font-medium pt-2">
-                            2023
-                          </h1>
-                          <p className="text-dark-blue font-bold ">
-                            Bachelor of Science in Information Technology
-                          </p>
-                          <p className="text-dark-blue text-sm font-semibold underline">
-                            Mumbai University
-                          </p>
-                        </div>
-                      </div>
-                      <div className="relative col-span-1 flex justify-center items-center">
-                        <div className="h-full w-1 bg-my-theme"></div>
-                        <div className="absolute w-6 h-6 rounded-full font-bold bg-my-theme z-10 text-white text-center">
-                          1
-                        </div>
-                      </div>
-                      <div className="col-span-4 w-full h-full"></div>
-                      {/* stack 2 */}
-                      <div className="col-span-4 w-full h-full"></div>
-                      <div className="relative col-span-1 flex justify-center items-center">
-                        <div className="h-full w-1 bg-my-theme"></div>
-                        <div className="absolute w-6 h-6 rounded-full font-bold bg-my-theme z-10 text-white text-center">
-                          2
-                        </div>
-                      </div>
-                      <div className="col-span-4 w-full h-full ">
-                        <div className="w-full h-full bg-my-theme  rounded-md p-2 md:pl-4">
-                          <h1 className="text-white text-lg font-medium pt-2">
-                            2015
-                          </h1>
-                          <p className="text-dark-blue font-bold ">
-                            HSC (Higher Secondary Certificate)
-                          </p>
-                          <p className="text-dark-blue text-sm font-semibold underline">
-                            Mumbai University
-                          </p>
-                        </div>
-                      </div>
-                      {/* stack 3 */}
-                      <div className="col-span-4 w-full h-full ">
-                        <div className="w-full h-full bg-my-theme  rounded-md p-2 md:pl-4">
-                          <h1 className="text-white text-lg font-medium pt-2">
-                            2013
-                          </h1>
-                          <p className="text-dark-blue font-bold">
-                            SSC (Secondary School Certificate )
-                          </p>
-                          <p className="text-dark-blue text-sm font-semibold underline">
-                            Mumbai University
-                          </p>
-                        </div>
-                      </div>
-                      <div className="relative col-span-1 flex justify-center items-center">
-                        <div className="h-full w-1 bg-my-theme"></div>
-                        <div className="absolute w-6 h-6 font-bold rounded-full bg-my-theme z-10 text-white text-center">
-                          3
-                        </div>
-                      </div>
-                      <div className="col-span-4 w-full h-full"></div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              {activeTab === 3 && (
-                <div className="mt-5">
-                  <p className="pl-5 pt-5">
-                    Looking for job as a MERN stack developer or react js
-                    developer
+        {/* Tabs Section */}
+        <div
+          id="about"
+          className="flex flex-col pt-5 md:pt-28 h-[550px] w-full md:w-[600px] md:ml-14"
+        >
+          <div className="flex justify-evenly text-white lg:text-[18px] border-my-theme rounded-lg p-2 border-2">
+            <button
+              className={`${
+                activeTab === 1 ? "active text-my-theme " : ""
+              } after:content-[''] `}
+              onClick={() => handleTabClick(1)}
+            >
+              Skills
+            </button>
+            <button
+              className={`${activeTab === 2 ? "active text-my-theme" : ""}`}
+              onClick={() => handleTabClick(2)}
+            >
+              Education
+            </button>
+            <button
+              className={`${activeTab === 3 ? "active text-my-theme" : ""}`}
+              onClick={() => handleTabClick(3)}
+            >
+              Experience
+            </button>
+          </div>
+          {/* Tabs data section */}
+          <div className="text-white">
+            {/* {activeTab === 1 && (
+              <div className="grid grid-cols-5 pt-2 grid-rows-4 gap-3 justify-items-center">
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandJavascript className="text-[60px] md:text-[45px] hover:text-[#F0DB4F] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">
+                    Javascript
                   </p>
                 </div>
-              )}
-            </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandHtml5 className="text-[60px] md:text-[45px] hover:text-[#f06529] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">HTML</p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandCss3 className="text-[60px] hover:text-[#2965f1] hover:scale-125 md:text-[45px]" />
+                  <p className="text-[18px] font-bold hidden lg:block">CSS</p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandBootstrap className="text-[60px]  hover:text-[#563d7c] md:text-[45px] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">
+                    Bootstrap
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandTailwind className="text-[55px]  hover:text-my-theme md:text-[45px] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">
+                    Tailwindcss
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandReact className="text-[60px] md:text-[45px] hover:text-[#61dafb] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">
+                    React Js
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandNodejs className="text-[60px] md:text-[45px] hover:text-[#8cc84b] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">
+                    Node Js
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <SiExpress className="text-[60px] md:text-[45px] hover:text-[#6c6c6c] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">
+                    Express Js
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandMongodb className="text-[60px] md:text-[45px] hover:text-[#47a248] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">
+                    MongoDB
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandMysql className="text-[60px] md:text-[45px] hover:text-[#00758f] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">MySQL</p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandRedux className="text-[60px] md:text-[45px] hover:text-[#764abc] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">Redux</p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandGit className="text-[60px] md:text-[45px] hover:text-[#f05032] hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">Git</p>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <TbBrandGithub className="text-[60px] md:text-[45px] hover:text-black hover:scale-125" />
+                  <p className="text-[18px] font-bold hidden lg:block">
+                    Github
+                  </p>
+                </div>
+              </div>
+            )} */}
+
+            {activeTab === 1 && (
+              <div className="grid grid-cols-5 pt-2 grid-rows-4 gap-3 justify-items-center">
+                {icons.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col justify-center items-center"
+                  >
+                    <item.icon
+                      className={`text-[60px] md:text-[45px] hover:scale-125`}
+                      style={{ color: item.color }}
+                    />
+                    <p className="text-[18px] font-bold hidden lg:block">
+                      {item.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {activeTab === 2 && (
+              <div className="pt-3">
+                <div className="">
+                  <div className="max-w-7xl mx-auto grid grid-cols-9">
+                    {/* Stack 1 */}
+                    <div className="col-span-4 w-full h-full">
+                      <div className="w-full h-full bg-my-theme rounded-md p-2 md:pl-4">
+                        <h1 className="text-white text-lg font-medium">2023</h1>
+                        <p className="text-dark-blue font-bold">Bsc IT</p>
+                        <p className="text-dark-blue text-sm font-semibold underline">
+                          Mumbai University
+                        </p>
+                      </div>
+                    </div>
+                    <div className="relative col-span-1 flex justify-center items-center">
+                      <div className="h-full w-1 bg-my-theme"></div>
+                      <div className="absolute w-6 h-6 rounded-full font-bold bg-my-theme z-10 text-white text-center">
+                        1
+                      </div>
+                    </div>
+                    <div className="col-span-4 w-full h-full"></div>
+                    {/* stack 2 */}
+                    <div className="col-span-4 h-full"></div>
+                    <div className="relative col-span-1 flex justify-center items-center">
+                      <div className="h-full w-1 bg-my-theme"></div>
+                      <div className="absolute w-6 h-6 rounded-full font-bold bg-my-theme z-10 text-white text-center">
+                        2
+                      </div>
+                    </div>
+                    <div className="col-span-4 w-full h-full ">
+                      <div className="w-full h-full bg-my-theme  rounded-md p-2 md:pl-4">
+                        <h1 className="text-white text-lg font-medium">2015</h1>
+                        <p className="text-dark-blue font-bold ">HSC</p>
+                        <p className="text-dark-blue text-sm font-semibold underline">
+                          Mumbai University
+                        </p>
+                      </div>
+                    </div>
+                    {/* stack 3 */}
+                    <div className="col-span-4 w-full h-full">
+                      <div className="w-full h-full bg-my-theme p-2 rounded-md md:pl-4">
+                        <h1 className="text-white text-lg font-medium pt-2">
+                          2013
+                        </h1>
+                        <p className="text-dark-blue font-bold">SSC</p>
+                        <p className="text-dark-blue text-sm font-semibold underline pb-2">
+                          Mumbai University
+                        </p>
+                      </div>
+                    </div>
+                    <div className="relative col-span-1 flex justify-center items-center">
+                      <div className="h-full w-1 bg-my-theme"></div>
+                      <div className="absolute w-6 h-6 font-bold rounded-full bg-my-theme z-10 text-white text-center">
+                        3
+                      </div>
+                    </div>
+                    <div className="col-span-4 w-full h-full"></div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeTab === 3 && (
+              <div className="pt-2">
+                <h4 className="text-xl">MoonLight pvt ltd</h4>
+                <p className=""> from 28th july till date</p>
+                <p className="pt-2">
+                  Looking for job as a MERN stack developer or react js
+                  developer
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>
