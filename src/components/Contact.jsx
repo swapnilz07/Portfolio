@@ -18,13 +18,16 @@ function Contact() {
       return;
     }
     try {
-      const result = await axios.post("http://localhost:5000/send-email", {
-        fullName,
-        email,
-        mobileNumber,
-        emailSubject,
-        message,
-      });
+      const result = await axios.post(
+        "https://portfolio-backend-six-iota.vercel.app/send-email",
+        {
+          fullName,
+          email,
+          mobileNumber,
+          emailSubject,
+          message,
+        }
+      );
       console.log("result ==>>", result);
 
       if (result.status === 200) {
