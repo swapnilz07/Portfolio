@@ -1,13 +1,17 @@
 import codeboy from "../../src/images/codeboy.png";
-import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
 function Home() {
   const socialMediaData = [
-    { icon: FaFacebookF, link: "https://www.facebook.com" },
-    { icon: FaTwitter, link: "https://www.twitter.com" },
-    { icon: FaLinkedinIn, link: "https://www.linkedin.com" },
+    { icon: FaLinkedinIn, link: "https://www.linkedin.com/in/swapnil-zakade/" },
+    { icon: FaGithub, link: "https://github.com/swapnilz07" },
+    // { icon: FaTwitter, link: "" },
+    {
+      icon: FaInstagram,
+      link: "https://www.instagram.com/swapnil.z_07?igsh=MWl0d3ozNHUxNnNqNw==",
+    },
   ];
 
   return (

@@ -111,79 +111,6 @@ function AboutMe() {
           </div>
           {/* Tabs data section */}
           <div className="text-white">
-            {/* {activeTab === 1 && (
-              <div className="grid grid-cols-5 pt-2 grid-rows-4 gap-3 justify-items-center">
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandJavascript className="text-[60px] md:text-[45px] hover:text-[#F0DB4F] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">
-                    Javascript
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandHtml5 className="text-[60px] md:text-[45px] hover:text-[#f06529] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">HTML</p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandCss3 className="text-[60px] hover:text-[#2965f1] hover:scale-125 md:text-[45px]" />
-                  <p className="text-[18px] font-bold hidden lg:block">CSS</p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandBootstrap className="text-[60px]  hover:text-[#563d7c] md:text-[45px] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">
-                    Bootstrap
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandTailwind className="text-[55px]  hover:text-my-theme md:text-[45px] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">
-                    Tailwindcss
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandReact className="text-[60px] md:text-[45px] hover:text-[#61dafb] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">
-                    React Js
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandNodejs className="text-[60px] md:text-[45px] hover:text-[#8cc84b] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">
-                    Node Js
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <SiExpress className="text-[60px] md:text-[45px] hover:text-[#6c6c6c] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">
-                    Express Js
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandMongodb className="text-[60px] md:text-[45px] hover:text-[#47a248] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">
-                    MongoDB
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandMysql className="text-[60px] md:text-[45px] hover:text-[#00758f] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">MySQL</p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandRedux className="text-[60px] md:text-[45px] hover:text-[#764abc] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">Redux</p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandGit className="text-[60px] md:text-[45px] hover:text-[#f05032] hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">Git</p>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <TbBrandGithub className="text-[60px] md:text-[45px] hover:text-black hover:scale-125" />
-                  <p className="text-[18px] font-bold hidden lg:block">
-                    Github
-                  </p>
-                </div>
-              </div>
-            )} */}
-
             {activeTab === 1 && (
               <div className="grid grid-cols-5 pt-2 grid-rows-4 gap-3 justify-items-center">
                 {icons.map((item, index) => (
@@ -266,12 +193,25 @@ function AboutMe() {
             )}
             {activeTab === 3 && (
               <div className="pt-2">
-                <h4 className="text-xl">MoonLight pvt ltd</h4>
-                <p className=""> from 28th july till date</p>
-                <p className="pt-2">
-                  Looking for job as a MERN stack developer or react js
-                  developer
-                </p>
+                <h4 className="text-md underline  text-my-theme font-bold">
+                  - CAPRITECH GLOBAL SERVICES PRIVATE LIMITED
+                </h4>
+                <p className="text-sm">( From July 28th to present )</p>
+                <ul className="list-disc pl-6">
+                  <li className="pt-2">
+                    Developing MERN stack applications for web and mobile
+                    platforms, leveraging Next.js for enhanced performance and
+                    SEO optimization.
+                  </li>
+                  <li className="pt-2">
+                    Building responsive and user-friendly web interfaces using
+                    React.js and Next.js.
+                  </li>
+                  <li className="pt-2">
+                    Working on React Native applications using Expo CLI to
+                    create user-friendly mobile applications.
+                  </li>
+                </ul>
               </div>
             )}
           </div>
