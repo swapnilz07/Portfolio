@@ -102,37 +102,6 @@ function Header() {
           </div>
         )}
       </div>
-
-      {/* This Section is only for small devices (below Medium screens) */}
-      {/* <div
-        className="cursor-pointer pr-4 z-10 text-white md:hidden "
-        onClick={() => setNav(!nav)}
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-      </div> */}
-
-      {/* {nav && (
-        <div className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen text-white font-bold  md:hidden text-lg bg-dark-blue ">
-          {links.map((data) => (
-            <NavLink
-              key={data.id}
-              to={data.path}
-              style={({ isActive }) => {
-                return {
-                  color: isActive ? "#00abf0" : "white",
-                };
-              }}
-              onClick={closeNav}
-            >
-              <ul>
-                <li className="mx-[25px] cursor-pointer hover:scale-105 duration-200 py-6 text-4xl capitalize">
-                  {data.title}
-                </li>
-              </ul>
-            </NavLink>
-          ))}
-        </div>
-      )} */}
     </nav>
   );
 }

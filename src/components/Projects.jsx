@@ -33,8 +33,8 @@ const Projects = () => {
         { src: mongodb, alt: "MongoDB" },
       ],
       imageSrc: FinanceApp,
-      githubLink: "https://github.com/example/project1",
-      liveLink: "https://example-project1-live.netlify.app",
+      githubLink: "https://github.com/swapnilz07/finance-app-client-side",
+      liveLink: "",
     },
     {
       id: 2,
@@ -48,12 +48,12 @@ const Projects = () => {
         { src: tailwindLogo, alt: "Tailwind CSS" },
       ],
       imageSrc: weatherApp,
-      githubLink: "https://github.com/example/project1",
-      liveLink: "https://example-project1-live.netlify.app",
+      githubLink: "https://github.com/swapnilz07/Weather-App",
+      liveLink: "https://weather-app-iota-mauve.vercel.app/",
     },
     {
       id: 3,
-      title: "Portfolio",
+      title: "My Portfolio",
       description: [
         "A cool website showing all my interesting coding projects!",
         "A nice place to see the cool stuff I've made with code.",
@@ -68,8 +68,8 @@ const Projects = () => {
         { src: mongodb, alt: "MongoDB" },
       ],
       imageSrc: portfolio,
-      githubLink: "https://github.com/example/project1",
-      liveLink: "https://example-project1-live.netlify.app",
+      githubLink: "https://github.com/swapnilz07/Portfolio/",
+      liveLink: "https://portfolio-mu-eosin-52.vercel.app/",
     },
     // {
     //   id: 4,
@@ -153,7 +153,7 @@ const Projects = () => {
 
             <div className="flex justify-center mt-4">
               <a
-                href={selectedProject.liveLink}
+                href={selectedProject.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md hover:bg-blue-600 mr-4"
@@ -162,7 +162,7 @@ const Projects = () => {
               </a>
               {/* GitHub Link Button */}
               <a
-                href={selectedProject.githubLink}
+                href={selectedProject.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-700 text-white font-semibold px-4 py-2 rounded-md hover:bg-gray-800"
