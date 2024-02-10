@@ -1,5 +1,5 @@
 import codeboy from "../../src/images/codeboy.png";
-import { FaInstagram, FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
