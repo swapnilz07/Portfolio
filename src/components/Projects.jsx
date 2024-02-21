@@ -5,6 +5,7 @@ import Card from "./Card";
 import portfolio from "../../src/images/portfolio.png";
 import FinanceApp from "../../src/images/FinanceAppImage.png";
 import weatherApp from "../../src/images/WeatherApp.png";
+import tictactoe from "../../src/images/Tictacttoe.png";
 
 import reactLogo from "../../src/images/ReactLogo.jpg";
 import nextLogo from "../../src/images/NextLogo.jpg";
@@ -92,27 +93,21 @@ const Projects = () => {
     //   githubLink: "https://github.com/example/project1",
     //   liveLink: "https://example-project1-live.netlify.app",
     // },
-    // {
-    //   id: 5,
-    //   title: "Tic Tac Toe - Project 5",
-    //   description: [
-    //     "Develop a functional finance-based web application for clients.",
-    //     "Users can find the best finance banks and non-banking finance companies.",
-    //     "Web app fetches data from the API to show all details about loans.",
-    //     "Technology Used: React, Node.js, Express.js, MongoDB, Material UI.",
-    //     "Notable Features: Login Functionality, User Authentication.",
-    //   ],
-    //   tech: [
-    //     { src: reactLogo, alt: "React" },
-    //     { src: muiLogo, alt: "Material UI" },
-    //     { src: nodeLogo, alt: "Node.js" },
-    //     { src: expressLogo, alt: "Express.js" },
-    //     { src: mongodb, alt: "MongoDB" },
-    //   ],
-    //   imageSrc: codeboy,
-    //   githubLink: "https://github.com/example/project1",
-    //   liveLink: "https://example-project1-live.netlify.app",
-    // },
+    {
+      id: 4,
+      title: "Tic Tac Toe - Project 5",
+      description: [
+        "Developed a classic Tic Tac Toe game using React.",
+        "Created an interactive user interface allowing players to click on cells to make their moves.",
+      ],
+      tech: [
+        { src: reactLogo, alt: "React Js" },
+        { src: tailwindLogo, alt: "Tailwind CSS" },
+      ],
+      imageSrc: tictactoe,
+      githubLink: "https://github.com/swapnilz07/tic-tac-toe",
+      liveLink: "https://tic-tac-toe-beta-flame.vercel.app/",
+    },
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
