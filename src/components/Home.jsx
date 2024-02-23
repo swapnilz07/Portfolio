@@ -56,9 +56,14 @@ function Home() {
           </p>
           <div className="border-b-4 border-b-my-theme w-[100%]"></div>
           <div>
-            <button className="h-[50px] w-[170px] bg-my-theme hover:bg-dark-blue rounded-2xl text-dark-blue hover:text-my-theme hover:border-2 hover:border-my-theme font-extrabold text-[19PX] items-center tracking-tight my-4">
-              View My Resume
-            </button>
+            <a
+              href="https://drive.google.com/drive/folders/1dElk3OZ874pmEMAu29OUQDm6lwQ652eq?usp=drive_link"
+              target="blank"
+            >
+              <button className="h-[50px] w-[170px] bg-my-theme hover:bg-dark-blue rounded-2xl text-dark-blue hover:text-my-theme hover:border-2 hover:border-my-theme font-extrabold text-[19PX] items-center tracking-tight my-4">
+                View My Resume
+              </button>
+            </a>
           </div>
         </div>
         {/* Image Section */}
