@@ -57,7 +57,7 @@ function Home() {
           <div className="border-b-4 border-b-my-theme w-[100%]"></div>
           <div>
             <a
-              href="https://drive.google.com/drive/folders/1dElk3OZ874pmEMAu29OUQDm6lwQ652eq?usp=drive_link"
+              href="https://drive.google.com/file/d/137dtHwFJSVBMUV4SOUk8jiFnX1ZKhNes/view?usp=sharing"
               target="blank"
             >
               <button className="h-[50px] w-[170px] bg-my-theme hover:bg-dark-blue rounded-2xl text-dark-blue hover:text-my-theme hover:border-2 hover:border-my-theme font-extrabold text-[19PX] items-center tracking-tight my-4">

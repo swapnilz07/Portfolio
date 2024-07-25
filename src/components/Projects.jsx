@@ -6,6 +6,8 @@ import portfolio from "../../src/images/portfolio.png";
 import FinanceApp from "../../src/images/FinanceAppImage.png";
 import weatherApp from "../../src/images/WeatherApp.png";
 import tictactoe from "../../src/images/Tictacttoe.png";
+import twitterClone from "../../src/images/TwitterClone.png";
+import youtubeClone from "../../src/images/YoutubeClone.png";
 
 import reactLogo from "../../src/images/ReactLogo.jpg";
 import nextLogo from "../../src/images/NextLogo.jpg";
@@ -15,30 +17,46 @@ import tailwindLogo from "../../src/images/TailwindLogo.jpg";
 import muiLogo from "../../src/images/MuiLogo.jpg";
 import mongodb from "../../src/images/MongoLogo.jpg";
 import viteLogo from "../../src/images/ViteLogo.jpg";
+import reactQuery from "../../src/images/react_query.jpg";
 
 const Projects = () => {
   const projectsDatas = [
     {
       id: 1,
-      title: "Finance App",
+      title: "Twitter Clone",
       description: [
-        "Develop a functional finance-based web application for clients.",
-        "Bank and NBFC Exploration : Discover top finance solutions.",
-        "Secure Authentication : User data protection with secure login.",
+        "Developed a fully responsive Twitter clone using React JS, Tailwind CSS, Daisy UI, and React Query for efficient data fetching.",
+        "Implemented Backend using Node JS and Express JS, with MongoDB for database management.",
       ],
       tech: [
-        { src: reactLogo, alt: "React" },
-        { src: muiLogo, alt: "Material UI" },
+        { src: reactLogo, alt: "React Js" },
+        { src: viteLogo, alt: "Vite" },
+        { src: reactQuery, alt: "React Query" },
+        { src: tailwindLogo, alt: "Tailwind CSS" },
         { src: nodeLogo, alt: "Node.js" },
         { src: expressLogo, alt: "Express.js" },
         { src: mongodb, alt: "MongoDB" },
       ],
-      imageSrc: FinanceApp,
-      githubLink: "https://github.com/swapnilz07/finance-app-client-side",
-      liveLink: "",
+      imageSrc: twitterClone,
+      githubLink: "https://github.com/swapnilz07/twitter-clone-mern",
+      liveLink: "https://tic-tac-toe-beta-flame.vercel.app/",
     },
     {
       id: 2,
+      title: "Youtube Clone",
+      description: [
+        "Built a YouTube API-powered application using React JS and Tailwind CSS for a fully responsive experience..",
+      ],
+      tech: [
+        { src: reactLogo, alt: "React Js" },
+        { src: tailwindLogo, alt: "Tailwind CSS" },
+      ],
+      imageSrc: youtubeClone,
+      githubLink: "https://github.com/swapnilz07/twitter-clone-mern",
+      liveLink: "https://tic-tac-toe-beta-flame.vercel.app/",
+    },
+    {
+      id: 3,
       title: "Weather App",
       description: [
         "Live Weather Forecasts : Real-time updates on current weather conditions..",
@@ -53,7 +71,7 @@ const Projects = () => {
       liveLink: "https://weather-app-iota-mauve.vercel.app/",
     },
     {
-      id: 3,
+      id: 4,
       title: "My Portfolio",
       description: [
         "A cool website showing all my interesting coding projects!",
@@ -72,30 +90,28 @@ const Projects = () => {
       githubLink: "https://github.com/swapnilz07/Portfolio/",
       liveLink: "https://portfolio-mu-eosin-52.vercel.app/",
     },
-    // {
-    //   id: 4,
-    //   title: "Netflix Clone - Project 4",
-    //   description: [
-    //     "Develop a functional finance-based web application for clients.",
-    //     "Users can find the best finance banks and non-banking finance companies.",
-    //     "Web app fetches data from the API to show all details about loans.",
-    //     "Technology Used: React, Node.js, Express.js, MongoDB, Material UI.",
-    //     "Notable Features: Login Functionality, User Authentication.",
-    //   ],
-    //   tech: [
-    //     { src: nextLogo, alt: "Next js" },
-    //     { src: reactLogo, alt: "React" },
-    //     { src: nodeLogo, alt: "Node.js" },
-    //     { src: expressLogo, alt: "Express.js" },
-    //     { src: mongodb, alt: "MongoDB" },
-    //   ],
-    //   imageSrc: codeboy,
-    //   githubLink: "https://github.com/example/project1",
-    //   liveLink: "https://example-project1-live.netlify.app",
-    // },
     {
-      id: 4,
-      title: "Tic Tac Toe - Project 5",
+      id: 5,
+      title: "Finance App",
+      description: [
+        "Develop a functional finance-based web application for clients.",
+        "Bank and NBFC Exploration : Discover top finance solutions.",
+        "Secure Authentication : User data protection with secure login.",
+      ],
+      tech: [
+        { src: reactLogo, alt: "React" },
+        { src: muiLogo, alt: "Material UI" },
+        { src: nodeLogo, alt: "Node.js" },
+        { src: expressLogo, alt: "Express.js" },
+        { src: mongodb, alt: "MongoDB" },
+      ],
+      imageSrc: FinanceApp,
+      githubLink: "https://github.com/swapnilz07/finance-app-client-side",
+      liveLink: "",
+    },
+    {
+      id: 6,
+      title: "Tic Tac Toe",
       description: [
         "Developed a classic Tic Tac Toe game using React.",
         "Created an interactive user interface allowing players to click on cells to make their moves.",
@@ -124,7 +140,7 @@ const Projects = () => {
     <>
       <section
         id="projects"
-        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-screen items-center md:px-[75px] px-[30px] py-20 "
+        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-auto items-center md:px-[75px] px-[30px] py-28"
       >
         {projectsDatas.map((project, index) => (
           <Card key={index} {...project} openModal={() => openModal(project)} />

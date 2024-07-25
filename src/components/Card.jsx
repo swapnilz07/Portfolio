@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
+// eslint-disable-next-line react/prop-types
 const Card = ({ title, imageSrc, openModal }) => {
   const [hovered, setHovered] = useState(false);
 

@@ -14,6 +14,7 @@ import {
   TbBrandGit,
   TbBrandGithub,
 } from "react-icons/tb";
+import { SiReactquery } from "react-icons/si";
 
 import { SiExpress } from "react-icons/si";
 
@@ -38,6 +39,7 @@ function AboutMe() {
     { icon: TbBrandRedux, name: "Redux", color: "#764abc" },
     { icon: TbBrandGit, name: "Git", color: "#f05032" },
     { icon: TbBrandGithub, name: "Github", color: "black" },
+    { icon: SiReactquery, name: "ReactQuery", color: "#FF4154" },
   ];
 
   return (
