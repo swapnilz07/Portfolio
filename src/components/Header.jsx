@@ -41,7 +41,7 @@ function Header() {
   return (
     <nav className="w-full h-16 fixed bg-gradient-to-r from-my-theme to-dark-blue md:px-[75px] px-[25px] flex justify-between items-center z-10">
       <div className="text-3xl text-white font-extrabold font-sans  ">
-        Swapil.
+        Swapnil.
       </div>
 
       {/* This Section is only for Medium screen or above Medium screen */}
